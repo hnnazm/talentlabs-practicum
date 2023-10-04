@@ -1,0 +1,11 @@
+#!/bin/bash
+
+token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwiaWQiOiI2NTFkMjRjNTc1Yzk5N2E4YmI2MmYxMDcifSwiaWF0IjoxNjk2NDEwNzQxLCJleHAiOjE2OTY0MTE2NDF9.aLyfozCTBU-lLE0Rg9RoTtLUgA57HonLZOOry7Ui_T0'
+
+id=651d28e1caf153495bf1e7b9
+
+curl "http://127.0.0.1:3000/api/contacts/$id" \
+  -X DELETE \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer $token" \

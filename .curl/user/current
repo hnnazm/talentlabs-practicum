@@ -1,0 +1,9 @@
+#!/bin/bash
+
+token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwiaWQiOiI2NTFkMjRjNTc1Yzk5N2E4YmI2MmYxMDcifSwiaWF0IjoxNjk2NDA4NzgwLCJleHAiOjE2OTY0MDk2ODB9.V5--H8JWIUiDGyVID0rbvoNCrPvZ8ntdQfqYefyleWk'
+
+curl http://127.0.0.1:3000/api/users/current \
+  -X POST \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer $token"

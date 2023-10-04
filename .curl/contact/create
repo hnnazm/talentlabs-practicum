@@ -1,0 +1,16 @@
+#!/bin/bash
+
+token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwiaWQiOiI2NTFkMjRjNTc1Yzk5N2E4YmI2MmYxMDcifSwiaWF0IjoxNjk2NDEyNDE2LCJleHAiOjE2OTY0MTMzMTZ9.jfkpVmrFdH5aT9mCwSqErDbyIEh5FxFFkOrvT4MlRPo'
+
+payload_valid='{
+  "name": "John Doe",
+  "email": "john2@email.com",
+  "phone": "0123456789"
+}'
+
+curl http://127.0.0.1:3000/api/contacts \
+  -X POST \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer $token" \
+  -d "$payload_valid"

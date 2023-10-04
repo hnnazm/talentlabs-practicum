@@ -1,0 +1,22 @@
+#!/bin/bash
+
+token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZW1haWwuY29tIiwiaWQiOiI2NTFkMjRjNTc1Yzk5N2E4YmI2MmYxMDcifSwiaWF0IjoxNjk2NDE0NjIxLCJleHAiOjE2OTY0MTU1MjF9.p4H6C07kGOHfBcleQ3OaYtLbMFIL91idDIJJ1ozvfY0'
+
+payload_name='{
+  "name": "John Smith"
+}'
+
+payload_full='{
+  "name": "John Smith",
+  "email": "johns@email.com",
+  "phone": "0123456789"
+}'
+
+id=651d336df3ef6a07e37069e7
+
+curl "http://127.0.0.1:3000/api/contacts/$id" \
+  -X PUT \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer $token" \
+  -d "$payload_full"
